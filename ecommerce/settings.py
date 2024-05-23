@@ -78,9 +78,9 @@ WSGI_APPLICATION = 'ecommerce.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'sql_server.pyodbc',
-        'NAME': '<db>',
-        'USER': '<camilo>',
-        'PASSWORD': '<Nairocontador17>',
+        'NAME': 'db',
+        'USER': 'camilo',
+        'PASSWORD': 'Nairocontador17',
         'HOST': 'bikefinal.database.windows.net',
         'PORT': '1433',
         'OPTIONS': {
@@ -89,6 +89,7 @@ DATABASES = {
         },
     }
 }
+
 
 
 # Password validation
