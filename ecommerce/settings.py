@@ -77,8 +77,16 @@ WSGI_APPLICATION = 'ecommerce.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'sql_server.pyodbc',
+        'NAME': '<db>',
+        'USER': '<camilo>',
+        'PASSWORD': '<Nairocontador17>',
+        'HOST': 'bikefinal.database.windows.net',
+        'PORT': '1433',
+        'OPTIONS': {
+            'driver': 'ODBC Driver 17 for SQL Server',
+            'MARS_Connection': True,
+        },
     }
 }
 
