@@ -79,16 +79,20 @@ DATABASES = {
     'default': {
         'ENGINE': 'sql_server.pyodbc',
         'NAME': 'db',
-        'USER': 'camilo',
+        'USER': 'camilo@bikefinal',
         'PASSWORD': 'Nairocontador17',
         'HOST': 'bikefinal.database.windows.net',
         'PORT': '1433',
         'OPTIONS': {
             'driver': 'ODBC Driver 17 for SQL Server',
-            'MARS_Connection': True,
+            'encrypt': 'true',
+            'trust_server_certificate': 'false',
+            'host_name_in_certificate': '*.database.windows.net',
+            'login_timeout': '30',
         },
     }
 }
+
 
 
 
