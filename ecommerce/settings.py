@@ -109,10 +109,13 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+# Directory where static files will be collected
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static')
 ]
 
+# Media files configuration
 MEDIA_URL = '/images/'
-
 MEDIA_ROOT = os.path.join(BASE_DIR, 'static/images')
