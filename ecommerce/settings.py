@@ -58,9 +58,10 @@ WSGI_APPLICATION = 'ecommerce.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
-DATABASES = {
-    'default': dj_database_url.parse(os.getenv('AZURE_POSTGRESQL_CONNECTIONSTRING'))
-}
+
+AZURE_POSTGRESQL_CONNECTIONSTRING = "dbname=postgres host=posbikes.postgres.database.azure.com port=5432 sslmode=require user=aad_postgresql_d40a6"
+
+DATABASES = {'default': dj_database_url.parse(AZURE_POSTGRESQL_CONNECTIONSTRING)}
 
 # Default primary key field type
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
